@@ -15,19 +15,13 @@ const socials = [
 		icon: <Mail size={20} />,
 		href: "mailto:me@soksophoanketia.com",
 		label: "Email",
-		handle: "me@soksophoanketia.com",
+		handle: "ketia",
 	},
 	{
 		icon: <Github size={20} />,
 		href: "https://github.com/ketiaaa",
 		label: "GitHub",
 		handle: "ketiaaa",
-	},
-	{
-		icon: <Instagram size={20} />,
-		href: "https://www.instagram.com/nhomketia/",
-		label: "Instagram",
-		handle: "nhomketia",
 	},
 ];
 
