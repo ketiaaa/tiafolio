@@ -45,7 +45,9 @@ export default function Home() {
 					>
 						open to opportunities
 					</Link>
-					. Diploma of IT from UTS. Previously at{" "}
+					. Bachelor of IT from{" "}
+					<span className="text-zinc-300">UTS</span>
+					. Previously System &amp; Network Analyst at{" "}
 					<Link
 						target="_blank"
 						href="https://www.nbc.org.kh"
