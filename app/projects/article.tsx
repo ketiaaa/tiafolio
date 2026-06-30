@@ -1,5 +1,8 @@
+"use client";
 import type { Project } from "@/.contentlayer/generated";
 import Link from "next/link";
+import { Eye } from "lucide-react";
+import { useViewCount } from "../hooks/useViewCount";
 
 type Props = {
 	project: Project;
@@ -7,6 +10,8 @@ type Props = {
 };
 
 export const Article: React.FC<Props> = ({ project }) => {
+	const views = useViewCount(project.slug);
+
 	return (
 		<Link href={`/projects/${project.slug}`}>
 			<article className="p-4 md:p-8">
@@ -21,6 +26,12 @@ export const Article: React.FC<Props> = ({ project }) => {
 						) : (
 							<span>SOON</span>
 						)}
+					</span>
+					<span className="text-zinc-500 text-xs flex items-center gap-1">
+						<Eye className="w-4 h-4" />
+						{views !== null
+							? Intl.NumberFormat("en-US", { notation: "compact" }).format(views)
+							: "—"}
 					</span>
 				</div>
 				<h2 className="z-20 text-xl font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
