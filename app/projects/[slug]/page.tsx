@@ -10,6 +10,12 @@ type Props = {
 	};
 };
 
+export async function generateStaticParams() {
+	return allProjects.map((project) => ({
+		slug: project.slug,
+	}));
+}
+
 export default async function PostPage({ params }: Props) {
 	const slug = params?.slug;
 	const project = allProjects.find((project) => project.slug === slug);
