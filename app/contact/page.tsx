@@ -1,5 +1,5 @@
 "use client";
-import { Github, Mail, Linkedin, Instagram } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -30,7 +30,7 @@ export default function Contact() {
 		<div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-16">
+				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:grid-cols-3 lg:gap-16 max-w-3xl">
 					{socials.map((s) => (
 						<Card key={s.label}>
 							<Link
